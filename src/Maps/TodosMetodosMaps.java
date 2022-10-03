@@ -1,4 +1,7 @@
-//        [x] Iniciar
+package Maps;
+
+public class TodosMetodosMaps {
+    //        [x] Iniciar
 //        https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html
 //        [x] toString()
 //        [x] put()
@@ -16,4 +19,8 @@
 //        [x] new TreeMap()
 //        [x] clear()
 //        [x] isEmpty()
+
+
+}
+
 
