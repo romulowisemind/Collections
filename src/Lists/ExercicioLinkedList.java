@@ -1,9 +1,11 @@
+package Lists;
+
 import java.util.LinkedList;
 
 public class ExercicioLinkedList {
     public static void main(String[] args) {
         System.out.println("Crie uma nova lista chamada lista2 " + "e coloque todos os elementos da list ArrayList nessa nova lista: ");
-        LinkedList<Double> notas2 = new LinkedList<Double>();
+        LinkedList<Double> notas2 = new LinkedList<>();
         notas2.add(7D);
         notas2.add(8.5);
         notas2.add(9.3);

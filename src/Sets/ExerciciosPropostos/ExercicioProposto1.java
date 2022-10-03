@@ -1,11 +1,11 @@
 package Sets.ExerciciosPropostos;
+
 import java.util.*;
 
 public class ExercicioProposto1 {
     public static void main(String[] args) {
         System.out.println("Cores do Arco Iris: ");
-        Set<ArcoIris> cores = new HashSet<>()
-        {
+        Set<ArcoIris> cores = new HashSet() {
             {
                 add(new ArcoIris("Vermelho"));
                 add(new ArcoIris("Laranja"));
@@ -26,14 +26,33 @@ public class ExercicioProposto1 {
         for (ArcoIris minhasCores : cores1) System.out.println(minhasCores.getCor());
 
         System.out.println("Exiba as cores na ordem inversa da que foi informada: ");
-        for (int i = 0; i <= cores.size() - 1 && i >= 0; i--){
-            System.out.println(cores);
+        Set<String> cores2 = new LinkedHashSet<>(
+                Arrays.asList("Violeta", "Anil", "Azul", "Verde", "Amarelo", "Laranja", "Vermelho"));
+        System.out.println(cores2);
+        List<String> coresArcoIrisList = new ArrayList<>(cores2);
+        Collections.reverse(coresArcoIrisList);
+
+        System.out.printf("Exiba todas as cores que começam com a letra v: ");
+        for (ArcoIris cor : cores) {
+            if (cor.startsWith("V")) {
+                System.out.println(cor);
+            }
         }
 
+        System.out.println("Remova todas as cores que começam com a letra v: ");
+        Iterator<ArcoIris> iterator = cores.iterator();
+        while (iterator.hasNext()) {
+            if (!iterator.next().startsWith("V")) iterator.remove();
+        }
+        System.out.println(cores);
+
+        System.out.println("Limpe o conjunto: ");
+        cores.clear();
+        System.out.println(cores);
 
 
-
-
+        System.out.println("Confira se o conjunto está vazio: ");
+        System.out.println(cores.isEmpty());
 
     }
 }
@@ -72,6 +91,10 @@ class ArcoIris {
     @Override
     public int hashCode() {
         return Objects.hash(cor);
+    }
+
+    public boolean startsWith(String V) {
+        return true;
     }
 }
 

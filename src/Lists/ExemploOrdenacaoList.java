@@ -1,4 +1,4 @@
-
+package Lists;
 
 /* Dados as seguintes informações sobre meus gatos, crie uma lista e ordene essa lista exibindo:
 (nome - idade - cor)
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ExemploOrdenacaoList {
     public static void main(String[] args) {
-        List<Gato> meusGatos = new ArrayList<>() {{
+        List<Gato> meusGatos = new ArrayList<Gato>() {{
             add(new Gato("Jhon", 18, "preto"));
             add(new Gato("Simba", 6, "rajado"));
             add(new Gato("Jhon", 12, "amarelo"));

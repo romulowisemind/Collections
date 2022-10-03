@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PrimeiroExercicio {
     public static void main(String[] args) {
-        List<Temperatura> temperaturaAtual = new ArrayList<>() {{
+        List<Temperatura> temperaturaAtual = new ArrayList<Temperatura>() {{
             add(new Temperatura("Janeiro", 18));
             add(new Temperatura("Fevereiro", 6));
             add(new Temperatura("Março", 4));
